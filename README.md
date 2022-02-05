@@ -1,4 +1,4 @@
-# Darweek 2022/01 => App "Vakinha Burger Delivery"
+# Dart Week 2022/01 => App "Vakinha Burger Delivery"
 
 Aplicativo de delivery realizado durante a Dart Week da Academia do Flutter. Está sendo utilizado GetX no seu total fundamento, pagamento por PIX sendo realizado com a parceria da GerenciaNet 
 
