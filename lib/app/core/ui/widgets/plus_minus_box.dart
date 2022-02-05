@@ -31,7 +31,7 @@ class PlusMinusBox extends StatelessWidget {
       borderRadius: BorderRadius.circular(20),
       shadowColor: Colors.black26,
       child: Container(
-        padding: EdgeInsets.all(10),
+        padding: const EdgeInsets.all(10),
         decoration: BoxDecoration(
             color: backgroundcolor, borderRadius: BorderRadius.circular(10)),
         child: Row(

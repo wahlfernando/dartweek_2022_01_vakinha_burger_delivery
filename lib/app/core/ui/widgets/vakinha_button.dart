@@ -25,10 +25,10 @@ class VakinhaButton extends StatelessWidget {
           onPressed: onPressed,
           child: Text(
             label,
-            style: TextStyle(fontSize: 14, fontWeight: FontWeight.bold),
+            style: const TextStyle(fontSize: 14, fontWeight: FontWeight.bold),
           ),
           style:
-              ElevatedButton.styleFrom(shape: StadiumBorder(), primary: color)),
+              ElevatedButton.styleFrom(shape: const StadiumBorder(), primary: color)),
     );
   }
 }

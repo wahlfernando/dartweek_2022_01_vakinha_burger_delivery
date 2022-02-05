@@ -1,13 +1,13 @@
 
 import 'package:vakinha_burger_mobile/app/models/produtct_model.dart';
 
-class ShoopingCardModel {
+class ShoppingCardModel {
   
   int quantity;
   ProdutctModel product;
 
 
-  ShoopingCardModel({
+  ShoppingCardModel({
     required this.quantity,
     required this.product,
   });

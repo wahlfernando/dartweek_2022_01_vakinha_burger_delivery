@@ -5,13 +5,20 @@ import 'package:vakinha_burger_mobile/app/models/shooping_card_model.dart';
 
 class ShoppiongCardService extends GetxService{
   
-  final _shoppingCard = <int, ShoopingCardModel>{}.obs;
+  final _shoppingCard = <int, ShoppingCardModel>{}.obs;
 
-  List<ShoopingCardModel> get products => _shoppingCard.values.toList();
+  List<ShoppingCardModel> get products => _shoppingCard.values.toList();
 
   int get totalProducts => _shoppingCard.values.length;
 
-  ShoopingCardModel? getById(int id) => _shoppingCard[id];
+  ShoppingCardModel? getById(int id) => _shoppingCard[id];
+
+  double get totalValue{
+    return _shoppingCard.values.fold(0, (totalValue, shoopingCardModel) {
+      totalValue += shoopingCardModel.product.price * shoopingCardModel.quantity;
+      return totalValue;
+    });
+  }
 
   void addAndRemoveProductInShoopingCard(
     ProdutctModel product,{
@@ -24,9 +31,11 @@ class ShoppiongCardService extends GetxService{
         product.quantity = quantity;  
         return product;
       }, ifAbsent: (){
-        return ShoopingCardModel(quantity: quantity, product: product);
+        return ShoppingCardModel(quantity: quantity, product: product);
       });
     }
   }
+
+  void clear() => _shoppingCard.clear();
 
 }

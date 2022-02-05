@@ -101,7 +101,7 @@ class _LoginPageState extends VakinhaState<LoginPage, LoginController> {
                             onPressed: () {
                               Get.toNamed('/auth/register');
                             },
-                            child: Text(
+                            child: const Text(
                               'Cadastre-se',
                               style: VakinhaUi.textBold,
                             ),

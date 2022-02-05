@@ -1,8 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:get/get_utils/get_utils.dart';
-import 'package:vakinha_burger_mobile/app/core/ui/widgets/vakinha_appbar.dart';
 import 'package:vakinha_burger_mobile/app/core/ui/widgets/vakinha_button.dart';
-import 'package:vakinha_burger_mobile/app/core/ui/widgets/vakinha_textformfield.dart';
 import 'package:get/get.dart';
 import 'package:vakinha_burger_mobile/app/modules/splash/splash_controller.dart';
 
@@ -13,7 +10,7 @@ class Splashpage extends GetView<SplashController> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Container(
-        color: Color(0xFF140E0E),
+        color: const Color(0xFF140E0E),
         child: Stack(
           children: [
             Align(

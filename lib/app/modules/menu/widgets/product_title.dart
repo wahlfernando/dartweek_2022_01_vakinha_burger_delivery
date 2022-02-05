@@ -17,7 +17,7 @@ class ProductTitle extends StatelessWidget {
         Get.toNamed('/product_detail', arguments: product);
       },
       child: Container(
-        margin: EdgeInsets.all(10),
+        margin: const EdgeInsets.all(10),
         height: 80,
         child: Row(
           children: [
@@ -37,7 +37,7 @@ class ProductTitle extends StatelessWidget {
             Expanded(
               child: Container(
                 color: Colors.white,
-                padding: EdgeInsets.all(10),
+                padding: const EdgeInsets.all(10),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   mainAxisAlignment: MainAxisAlignment.spaceAround,
