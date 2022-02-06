@@ -1,4 +1,3 @@
-import 'package:flutter/rendering.dart';
 import 'package:get/get.dart';
 import 'package:flutter/material.dart';
 import 'package:vakinha_burger_mobile/app/core/ui/formater_helper.dart';
@@ -8,7 +7,10 @@ import 'package:validatorless/validatorless.dart';
 import './shooping_card_controller.dart';
 
 class ShoopingCardPage extends GetView<ShoopingCardController> {
-  const ShoopingCardPage({Key? key}) : super(key: key);
+
+  final formKey = GlobalKey<FormState>();
+
+  ShoopingCardPage({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -23,6 +25,7 @@ class ShoopingCardPage extends GetView<ShoopingCardController> {
               ),
               child: IntrinsicHeight(
                 child: Form(
+                  key: formKey,
                   child: Visibility(
                     visible: controller.products.isNotEmpty,
                     replacement: Padding(
@@ -124,7 +127,15 @@ class ShoopingCardPage extends GetView<ShoopingCardController> {
                             width: context.widthTransformer(reducedBy: 10),
                             child: VakinhaButton(
                               label: 'FINALIZAR',
-                              onPressed: () {},
+                              onPressed: () {
+                                final formValid = formKey.currentState?.validate() ?? false;
+
+                                if (formValid) {
+                                  controller.createOrder();  
+                                }
+
+                                
+                              },
                             ),
                           ),
                         ),
