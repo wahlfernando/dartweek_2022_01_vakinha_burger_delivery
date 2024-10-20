@@ -48,6 +48,7 @@ class HomeController extends GetxController {
        transition: Transition.fadeIn,
       );
       }
+      return null;
       
   }
 }

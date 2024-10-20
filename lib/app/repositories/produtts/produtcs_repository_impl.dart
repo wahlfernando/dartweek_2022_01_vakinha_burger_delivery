@@ -4,8 +4,6 @@ import 'package:vakinha_burger_mobile/app/core/rest_client/rest_client.dart';
 import 'package:vakinha_burger_mobile/app/models/produtct_model.dart';
 import 'package:vakinha_burger_mobile/app/repositories/produtts/produtcs_repository.dart';
 
-import './produtcs_repository.dart';
-
 class ProdutcsRepositoryImpl implements ProdutcsRepository {
   final RestClient _restClient;
 

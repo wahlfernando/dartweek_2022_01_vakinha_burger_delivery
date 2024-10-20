@@ -7,6 +7,6 @@ class MenuBindings implements Bindings {
     @override
     void dependencies() {
       Get.lazyPut<ProdutcsRepository>(() => ProdutcsRepositoryImpl(restClient: Get.find()));
-        Get.put(MenuController(produtcsRepository: Get.find()));
+        Get.put(MenuControllerV(produtcsRepository: Get.find()));
     }
 }

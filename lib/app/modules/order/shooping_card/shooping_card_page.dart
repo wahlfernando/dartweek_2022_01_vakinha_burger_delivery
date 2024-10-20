@@ -35,7 +35,7 @@ class ShoopingCardPage extends GetView<ShoopingCardController> {
                         children: [
                           Text(
                             'Carrinho',
-                            style: context.textTheme.headline6?.copyWith(
+                            style: context.textTheme.titleLarge?.copyWith(
                                 fontWeight: FontWeight.bold,
                                 color: context.theme.primaryColorDark),
                           ),
@@ -57,7 +57,7 @@ class ShoopingCardPage extends GetView<ShoopingCardController> {
                             children: [
                               Text(
                                 'Carrinho',
-                                style: context.textTheme.headline6?.copyWith(
+                                style: context.textTheme.titleLarge?.copyWith(
                                     fontWeight: FontWeight.bold,
                                     color: context.theme.primaryColorDark),
                               ),
@@ -103,13 +103,13 @@ class ShoopingCardPage extends GetView<ShoopingCardController> {
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: [
                               Text('Total do Pedido',
-                                  style: context.theme.textTheme.bodyText1
+                                  style: context.theme.textTheme.bodyLarge
                                       ?.copyWith(fontWeight: FontWeight.bold)),
                               Obx(() {
                                 return Text(
                                   FormaterHelper.formatCurrency(
                                       controller.totalValue),
-                                  style: context.theme.textTheme.bodyText1
+                                  style: context.theme.textTheme.bodyLarge
                                       ?.copyWith(fontWeight: FontWeight.bold),
                                 );
                               })

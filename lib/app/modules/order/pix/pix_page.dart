@@ -24,9 +24,9 @@ class PixPage extends StatelessWidget {
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                Text('Valor a Pagar', style: context.textTheme.headline4),
+                Text('Valor a Pagar', style: context.textTheme.headlineMedium),
                 Text(FormaterHelper.formatCurrency(_orderPix.totalValue),
-                    style: context.textTheme.headline6?.copyWith(
+                    style: context.textTheme.titleLarge?.copyWith(
                         color: context.theme.primaryColorDark,
                         fontWeight: FontWeight.bold)),
                 Image.memory(
@@ -39,10 +39,10 @@ class PixPage extends StatelessWidget {
                     Clipboard.setData(ClipboardData(text: _orderPix.code));
                     Get.rawSnackbar(message: 'Código PIX copiado!', snackPosition: SnackPosition.BOTTOM);
                   },
-                  style: TextButton.styleFrom(primary: Colors.grey),
+                  style: TextButton.styleFrom(foregroundColor: Colors.grey),
                   child:  Text(
                     'PIX Copia e Cola',
-                    style: context.textTheme.headline4?.copyWith(
+                    style: context.textTheme.headlineMedium?.copyWith(
                       fontSize: 30,
                       decoration: TextDecoration.underline,
                       decorationStyle: TextDecorationStyle.dotted

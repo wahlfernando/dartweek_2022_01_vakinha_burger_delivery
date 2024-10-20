@@ -33,7 +33,7 @@ class FinishedPage extends StatelessWidget {
                   child: Text(
                     'Pedido realizado com sucesso, clique no botão abaixo para acesso o QRCode do pix',
                     textAlign: TextAlign.center,
-                    style: context.textTheme.headline6?.copyWith(
+                    style: context.textTheme.titleLarge?.copyWith(
                         color: context.theme.primaryColorDark,
                         fontWeight: FontWeight.bold),
                   ),

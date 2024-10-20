@@ -47,13 +47,13 @@ class _RegisterPageState
               children: [
                 Text(
                   'Cadastro',
-                  style: context.textTheme.headline6?.copyWith(
+                  style: context.textTheme.titleLarge?.copyWith(
                       fontWeight: FontWeight.bold,
                       color: context.theme.primaryColorDark),
                 ),
                 Text(
                   'Preencha os campos abaixo para criar o  seu cadastro.',
-                  style: context.textTheme.bodyText1
+                  style: context.textTheme.bodyLarge
                       ?.copyWith(color: context.theme.primaryColorDark),
                 ),
                 const SizedBox(

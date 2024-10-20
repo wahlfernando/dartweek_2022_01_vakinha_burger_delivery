@@ -21,7 +21,7 @@ class AuthService extends GetxService{
     //Toda vez que vai ter alguma modificação no _isLogged, vai ser executado esse ever, por isso que a logica de redirecionamento 
     //deve estar ali para reaproveitamento de código.
     ever<bool?>(_isLogged, (isLogged){
-      if(_isLogged == null || !isLogged!){
+      if(!isLogged!){
         Get.offAllNamed('/auth/login');
       } else{
         Get.offAllNamed('/home');

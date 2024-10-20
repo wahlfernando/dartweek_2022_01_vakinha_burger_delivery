@@ -20,8 +20,7 @@ class VakinhaRoundedButton extends StatelessWidget {
       onPressed: onPressed,
       child: Text(label, style: TextStyle(color: Colors.grey, fontSize: fontsize),),
       style: ElevatedButton.styleFrom(
-        shape: const CircleBorder(),
-        primary: Colors.white
+        shape: const CircleBorder(), backgroundColor: Colors.white
       ),
     );
   }
